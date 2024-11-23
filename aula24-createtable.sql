@@ -1,0 +1,18 @@
+Create table Canal(
+    CanalId INT PRIMARY KEY
+    NOME VARCHAR(150) NOT NULL,
+    CONTAGEMINSCRITOS INT DEFAULT 0,
+    DATACRIACAO DATETIME NOT NULL
+)
+
+
+CREATE table(
+    VideoID INT PRIMARY KEY,
+    NOME VARCHAR(150) NOT NULL,
+    Visualizacoes Int DEFAULT 0,
+    likes INT DEFAULT 0,
+    Dislikes INT DEFAULT 0,
+    Duracao INT NOT NULL,
+    CanalId INT FOREIGN KEY REFERENCES CANAL (CanalId)
+
+)
